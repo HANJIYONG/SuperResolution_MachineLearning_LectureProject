@@ -21,6 +21,7 @@
 |---|---|---|---|---|
 | |162,770|19,867|19,962|202,509|
 <br>
+
 ![](https://images.velog.io/images/jyong0719/post/1559477e-6f17-4c67-b954-0e8eab8fe8bc/image.png)
 
 같은 데이터를 4배 저해상화(down scale)하여 Model의 Input data로 사용하고 원본 이미지를 Target data로 사용하였습니다. 
