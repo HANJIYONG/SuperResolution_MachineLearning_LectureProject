@@ -20,7 +20,7 @@
 |Data|Train|Validation|Test|Total|
 |---|---|---|---|---|
 | |162,770|19,867|19,962|202,509|
-
+<br>
 ![](https://images.velog.io/images/jyong0719/post/1559477e-6f17-4c67-b954-0e8eab8fe8bc/image.png)
 
 같은 데이터를 4배 저해상화(down scale)하여 Model의 Input data로 사용하고 원본 이미지를 Target data로 사용하였습니다. 
@@ -42,6 +42,7 @@ Output이 target data와 유사하며 PSNR역시 큰 값으로 측정되기를 �
 ||Optimizer|Batch size|Learning rate|Epochs|
 |---|---|---|---|---|
 |Hyper parameters |Adam|256|1e-2 ~ 1e-3|40|
+
 모델 학습에 사용한 파라미터들은 위 표와 같습니다. Loss를 줄이는 것은 Adam optimizer와 Learning rate 조작을 통해 적은 시도로 충분히 낮은 값을 기록할 수 있었습니다. 그러나 낮은 오차에도 불구하고 결과는 학습 방법에 따라 달라짐을 볼 수 있었습니다. 저의 학습 방법에 있어 큰 차이를 보이길 기대했던 요인은 학습 모델의 Input channel과 output channel에 있었습니다. 때문에 *RGB to RGB, Gray  to RGB , Gray to Gray* 로 Super Resolution을 수행하는 세가지 Model로 학습을 진행 하였습니다.
 ![](https://images.velog.io/images/jyong0719/post/0ab2287a-748c-4aff-8a37-c46ffc5b6756/image.png)
 
